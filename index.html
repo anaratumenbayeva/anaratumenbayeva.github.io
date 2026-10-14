@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anara Tumenbayeva · Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#F6F6FA;--surface:#FFFFFF;--ink:#1A1A38;--muted:#5E5E7A;--line:#DCDCE8;--accent:#4B3FD6;--accent-ink:#FFFFFF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13132B;--surface:#1C1C3A;--ink:#EDEDFA;--muted:#A0A0C0;--line:#31315A;--accent:#8E85FF;--accent-ink:#13132B;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#13132B;--surface:#1C1C3A;--ink:#EDEDFA;--muted:#A0A0C0;--line:#31315A;--accent:#8E85FF;--accent-ink:#13132B;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+main{max-width:680px;margin:0 auto;padding:56px 22px 64px}
+h1{font-size:clamp(34px,8vw,52px);line-height:1.08;letter-spacing:-.03em;font-weight:800;margin:0 0 18px}
+.name{color:var(--muted);font-weight:600;margin:0 0 14px}
+.lead{font-size:19px;max-width:560px;margin:0 0 28px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:12px 20px;border-radius:10px}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+h2{font-size:22px;margin:56px 0 18px;letter-spacing:-.01em}
+.skills{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.skills li{border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;font-size:15px;background:var(--surface)}
+.proj{background:var(--surface);border:1.5px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;padding:22px;margin-bottom:16px}
+.proj.soon{border-left-color:var(--line);opacity:.85}
+.proj h3{margin:0 0 4px;font-size:19px}
+.tag{font-size:14px;color:var(--muted);margin:0 0 14px}
+dl{margin:0}
+dt{font-weight:600;font-size:15px;margin-top:10px}
+dd{margin:2px 0 0;color:var(--muted);font-size:15px}
+.proj a{color:var(--accent);font-weight:600}
+.about p{max-width:560px;margin:0 0 12px}
+footer{margin-top:56px;padding-top:22px;border-top:1.5px solid var(--line);color:var(--muted);font-size:15px}
+footer a{color:var(--accent);font-weight:600}
+</style>
+</head>
+<body>
+<main>
+  <p class="name">Anara Tumenbayeva · Junior Data / Business Analyst</p>
+  <h1>I turn raw data into decision-ready dashboards and reports.</h1>
+  <p class="lead">I work with Power BI, SQL and Excel on sales performance, data modeling and data reconciliation, and I use AI tools to move faster while checking that the numbers are right.</p>
+  <a class="btn" href="#projects">See my projects</a>
+
+  <h2>Skills</h2>
+  <ul class="skills">
+    <li>Power BI</li>
+    <li>SQL</li>
+    <li>Excel</li>
+    <li>Google Sheets</li>
+    <li>Data modeling</li>
+    <li>Data reconciliation</li>
+    <li>AI-assisted analytics</li>
+    <li>Python (in progress)</li>
+    <li>Statistics and product analytics (in progress)</li>
+  </ul>
+
+  <h2 id="projects">Projects</h2>
+
+  <article class="proj">
+    <h3>Productive Streak</h3>
+    <p class="tag">Personal habit tracker · live app</p>
+    <dl>
+      <dt>Problem</dt>
+      <dd>I wanted to measure productive days with clear rules instead of guessing: no fast food, a morning stretch, and homework done.</dd>
+      <dt>What I built</dt>
+      <dd>A web app with a daily three-item checker, a streak counter, best streak, total productive days, and a 5-week calendar where past days can be corrected.</dd>
+      <dt>How I built it</dt>
+      <dd>I described the rules in plain language to Claude, tested each version in the browser, and asked for changes until the streak logic matched my own count.</dd>
+      <dt>Next improvement</dt>
+      <dd>Sync data across devices and add weekly summaries.</dd>
+    </dl>
+    <p style="margin:14px 0 0"><a href="https://anaratumenbayeva.github.io/productive-streak/">Open the app</a></p>
+  </article>
+
+  <article class="proj">
+    <h3>Sales Performance Dashboard</h3>
+    <p class="tag">Sales analytics · live dashboard, demo dataset</p>
+    <dl>
+      <dt>Problem</dt>
+      <dd>A retail business needs to see quickly whether sales are growing, and which regions and categories drive or hold back that growth.</dd>
+      <dt>What I built</dt>
+      <dd>An interactive dashboard with revenue, orders, average order value and gross margin, year-over-year comparison, region and category filters, and automatic written insights, plus the SQL behind the category analysis.</dd>
+      <dt>How I built it</dt>
+      <dd>I designed the metrics and the data model (date, region, category, revenue, orders, cost), generated a demo dataset with realistic seasonality and trends, and built the dashboard with Claude, checking the totals myself.</dd>
+      <dt>Next improvement</dt>
+      <dd>Rebuild it in Power BI on a real public dataset and add a forecast.</dd>
+    </dl>
+    <p style="margin:14px 0 0"><a href="https://anaratumenbayeva.github.io/sales-dashboard/">Open the dashboard</a></p>
+  </article>
+
+  <article class="proj">
+    <h3>Reconciliation Tool</h3>
+    <p class="tag">Data reconciliation · live app, tested on sample data</p>
+    <dl>
+      <dt>Problem</dt>
+      <dd>Two sources that should match, such as a sales export and a finance ledger, often differ, and checking them by hand is slow and error-prone.</dd>
+      <dt>What I built</dt>
+      <dd>A tool that compares two CSV files on a key column and flags missing records, duplicates and amount differences, with a summary of match rate and total difference.</dd>
+      <dt>How I built it</dt>
+      <dd>I defined the matching rules and the types of exceptions, built it with Claude, and checked the results against a sample dataset with known planted errors.</dd>
+      <dt>Next improvement</dt>
+      <dd>Support several key columns, date matching and exporting the exceptions list.</dd>
+    </dl>
+    <p style="margin:14px 0 0"><a href="https://anaratumenbayeva.github.io/reconciliation-tool/">Open the tool</a></p>
+  </article>
+
+  <h2>About</h2>
+  <div class="about">
+    <p>I'm a junior data and business analyst. I have built end-to-end analytical projects covering sales performance, data modeling and data reconciliation, turning raw data into dashboards and reports that support decisions.</p>
+    <p>I'm currently strengthening Python, statistics, product analytics and foundational machine learning in an intensive data analytics program. I'm open to junior analyst roles, internships, and freelance projects.</p>
+  </div>
+
+  <footer>Contact: <a href="mailto:tumenbaeva05@gmail.com">tumenbaeva05@gmail.com</a></footer>
+</main>
+</body>
+</html>
